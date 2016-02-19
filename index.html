@@ -1,139 +1,156 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Series DB</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<header class="web header"> <!--Cabecera de la web donde se incluye su título, el menú de navegacion y la barra de búsqueda -->
-			<div class="container">
-				<div class="row">
-					<div class="col-3">
-						<div class="brand">Series DB</div>
-					</div>
-					<div class="col-6">
-						<nav class="main menu">
-							<ul>
-								<li>
-									<a href="#" title="Sistema de recomendación de series y películas">Descubrir</a>
-								</li>
-								<li>
-									<a href="#" title="Catálogo de películas">Películas</a>
-								</li>
-								<li>
-									<a href="#" title="Catálogo de series">Series</a>
-								</li>
-								<li>
-									<a href="#" title="Listado de actores y actrices de series y películas">Actores y actrices</a>
-								</li>
-							</ul>
-						</nav>	
-					</div>
-					<div class="col-3">
-						<form class="search form">
-						<input type="search" id="search" name="q" placeholder="Buscar...">
-						<button type="search">Buscar</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</header>
 
-		<main class="web main"><!-- Contenido principal de la página donde aparecerá el listado de series-->
-			<section class="series media list">
-				<header class="series list header">
-					<h2 class="series list header title">Catálogo de series</h2>
-				</header>
-				<article class="series media item">
-					<a href="#" class="series media link">
-						<header class="series media header"> 
-							<h3 class="series media title">Supernatural</h3>
-							<img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Supernatural Wrestle Your demons" title="Carátula de Supernatural">
-						</header>
-						<div class="meta">
-							<div class="categories">
-								<ul>
-									<li>Drama</li>
-									<li>Misterio</li>
-								</ul>
-							</div>
-							<time class="release date" datatime="2005-03-12">2005</time>
-							<div class="rating">7.1</div>
-						</div>
-						<p class="overview">Cuando eran niños, Sam y Dean Winchester, perdieron a su madre debido a una misteriosa y demoníaca fuerza supernatural. Posteriormente, su padre los crió para que fueran soldados. Él les enseño sobre el mal que vive en los rincones obscuros y en las carreteras secundarias de América... y también les enseñó como matarlo. Ahora los hermanos Winchester recorren el país en su Chevy Impala del '67, luchando contra todo tipo de amenaza sobrenatural que encuentran en el camino.</p>
-					</a>
-				</article>
-				<article class="series media item">
-					<a href="#" class="series media link">
-						<header class="series media header"> 
-							<h3 class="series media title">The Simpsons</h3>
-							<img src="https://image.tmdb.org/t/p/w185/yTZQkSsxUFJZJe67IenRM0AEklc.jpg" alt="Supernatural Wrestle Your demons" title="Carátula de Supernatural">
-						</header>
-						<div class="meta">
-							<div class="categories">
-								<ul>
-									<li>Animación</li>
-									<li>Comedia</li>
-								</ul>
-							</div>
-							<time class="release date" datatime="1989-03-12">1989</time>
-							<div class="rating">8</div>
-						</div>
-						<p class="overview">Los Simpsons es una comedia americana de animación creada por Matt Groening para la compañía Fox. La serie es una parodia satírica del estilo de la clase media americana encarnada por una familia con ese mismo nombre, compuesta por Homer, Marge, Bart, Lisa, y Maggie Simpson. La serie se ubica en la ciudad ficticia de Springfield y parodia la cultura, la sociedad, la televisión americanos y muchos otros aspectos de la condición humana.</p>
-						
-					</a>
-				</article>
-				<article class="series media item">
-					<a href="#" class="series media link">
-						<header class="series media header"> 
-							<h3 class="series media title">Vikings</h3>
-							<img src="https://image.tmdb.org/t/p/w185/mBDlsOhNOV1MkNii81aT14EYQ4S.jpg" alt="Ragnar's eye" title="Carátula de Vikings">
-						</header>
-						<div class="meta">
-							<div class="categories">
-								<ul>
-									<li>Drama</li>
-									<li>Acción</li>
-								</ul>
-							</div>
-							<time class="release date" datatime="2013-03-12">2013</time>
-							<div class="rating">7.5</div>
-						</div>
-						<p class="overview">Sigue las aventuras de Ragnar Lothbrok, el héroe más grande de su época. La serie narra las sagas de la banda de hermanos vikingos de Ragnar y su familia, cuando él se levanta para convertirse en el rey de las tribus vikingas. Además de ser un guerrero valiente, Ragnar encarna las tradiciones nórdicas de la devoción a los dioses, la leyenda dice que él era un descendiente directo de Odín, el dios de la guerra y los guerreros</p>
-					
-					</a>
-				</article>
-				<article class="series media item">
-					<a href="#" class="series media link">
-						<header class="series media header"> 
-							<h3 class="series media title">Game of Thrones</h3>
-							<img src="https://image.tmdb.org/t/p/w185/36tqIH6BPUg7KufHNJEwyeVIpO.jpg" alt="Tyrion and a dragon flying" title="Carátula de Game of Thrones">
-						</header>
-						<div class="meta">
-							<div class="categories">
-								<ul>
-									<li>Fantasía</li>
-									<li>Drama</li>
-								</ul>
-							</div>
-							<time class="release date" datatime="2011-03-12">2011</time>
-							<div class="rating">8.1</div>
-						</div>
-						<p class="overview">La serie, ambientada en los continentes ficticios de Westeros y Essos al final de un verano de una decada de duración, entrelaza varias líneas argumentales. La primera sigue a los miembros de varias casas nobles inmersos en una guerra civil por conseguir el Trono de Hierro de los Siete Reinos. La segunda trata sobre la creciente amenaza de un inminente invierno y sobre las temibles criaturas del norte. La tercera relata los esfuerzos por reclamar el trono de los últimos miembros exiliados de una dinastía destronada. A pesar de sus personajes moralmente ambiguos, la serie profundiza en los problemas de la jerarquía social, religión, lealtad, corrupción, sexo, guerra civil, crimen y castigo.</p>
-					</a>
-				</article>
-			</section>
-		</main>
+<head>
+    <meta charset="utf-8">
+    <title>Series DB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-		<footer class="web footer">
-			<nav>
-				<a href="#">Aviso legal</a>
-				<a href="#">Política de cookies</a>
-				<a href="#" class="go top">Volver arriba</a>
-			</nav>
+<body>
+    <header class="web header">
+        <!--Cabecera de la web donde se incluye su título, el menú de navegacion y la barra de búsqueda -->
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="brand">Series DB</div>
+                </div>
+                <div class="col-6">
+                    <nav class="main menu">
+                        <ul>
+                            <li>
+                                <a href="#" title="Sistema de recomendación de series y películas">Descubrir</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Catálogo de películas">Películas</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Catálogo de series">Series</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Listado de actores y actrices de series y películas">Actores y actrices</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-3">
+                    <form class="search form">
+                        <input type="search" id="search" name="q" placeholder="Buscar...">
+                        <button type="search">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="web main">
+        <!-- Contenido principal de la página donde aparecerá el listado de series-->
+        <div class="container">
+            <section class="series media list">
+                <header class="series list header">
+                    <h2 class="series list header title">Catálogo de series</h2>
+                </header>
+                <div class="row">
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Supernatural Wrestle Your demons" title="Carátula de Supernatural">
+                                    </div>
+                                    <div class="col-8">
+                                        <header class="series media header">
+                                            <h3 class="series media title">Supernatural</h3>
+                                        </header>
+                                        <div class="meta">
+                                            <div class="categories">
+                                                <ul>
+                                                    <li>Drama</li>
+                                                    <li>Misterio</li>
+                                                </ul>
+                                            </div>
+                                            <time class="release date" datatime="2005-03-12">2005</time>
+                                            <div class="rating">7.1</div>
+                                        </div>
+                                        <p class="overview">Cuando eran niños, Sam y Dean Winchester, perdieron a su madre debido a una misteriosa y demoníaca fuerza supernatural. Posteriormente, su padre los crió para que fueran soldados. Él les enseño sobre el mal que vive en los rincones obscuros y en las carreteras secundarias de América... y también les enseñó como matarlo. Ahora los hermanos Winchester recorren el país en su Chevy Impala del '67, luchando contra todo tipo de amenaza sobrenatural que encuentran en el camino.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <header class="series media header">
+                                    <h3 class="series media title">The Simpsons</h3>
+                                    <img src="https://image.tmdb.org/t/p/w185/yTZQkSsxUFJZJe67IenRM0AEklc.jpg" alt="Supernatural Wrestle Your demons" title="Carátula de Supernatural">
+                                </header>
+                                <div class="meta">
+                                    <div class="categories">
+                                        <ul>
+                                            <li>Animación</li>
+                                            <li>Comedia</li>
+                                        </ul>
+                                    </div>
+                                    <time class="release date" datatime="1989-03-12">1989</time>
+                                    <div class="rating">8</div>
+                                </div>
+                                <p class="overview">Los Simpsons es una comedia americana de animación creada por Matt Groening para la compañía Fox. La serie es una parodia satírica del estilo de la clase media americana encarnada por una familia con ese mismo nombre, compuesta por Homer, Marge, Bart, Lisa, y Maggie Simpson. La serie se ubica en la ciudad ficticia de Springfield y parodia la cultura, la sociedad, la televisión americanos y muchos otros aspectos de la condición humana.</p>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <header class="series media header">
+                                    <h3 class="series media title">Vikings</h3>
+                                    <img src="https://image.tmdb.org/t/p/w185/mBDlsOhNOV1MkNii81aT14EYQ4S.jpg" alt="Ragnar's eye" title="Carátula de Vikings">
+                                </header>
+                                <div class="meta">
+                                    <div class="categories">
+                                        <ul>
+                                            <li>Drama</li>
+                                            <li>Acción</li>
+                                        </ul>
+                                    </div>
+                                    <time class="release date" datatime="2013-03-12">2013</time>
+                                    <div class="rating">7.5</div>
+                                </div>
+                                <p class="overview">Sigue las aventuras de Ragnar Lothbrok, el héroe más grande de su época. La serie narra las sagas de la banda de hermanos vikingos de Ragnar y su familia, cuando él se levanta para convertirse en el rey de las tribus vikingas. Además de ser un guerrero valiente, Ragnar encarna las tradiciones nórdicas de la devoción a los dioses, la leyenda dice que él era un descendiente directo de Odín, el dios de la guerra y los guerreros</p>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <header class="series media header">
+                                    <h3 class="series media title">Game of Thrones</h3>
+                                    <img src="https://image.tmdb.org/t/p/w185/36tqIH6BPUg7KufHNJEwyeVIpO.jpg" alt="Tyrion and a dragon flying" title="Carátula de Game of Thrones">
+                                </header>
+                                <div class="meta">
+                                    <div class="categories">
+                                        <ul>
+                                            <li>Fantasía</li>
+                                            <li>Drama</li>
+                                        </ul>
+                                    </div>
+                                    <time class="release date" datatime="2011-03-12">2011</time>
+                                    <div class="rating">8.1</div>
+                                </div>
+                                <p class="overview">La serie, ambientada en los continentes ficticios de Westeros y Essos al final de un verano de una decada de duración, entrelaza varias líneas argumentales. La primera sigue a los miembros de varias casas nobles inmersos en una guerra civil por conseguir el Trono de Hierro de los Siete Reinos. La segunda trata sobre la creciente amenaza de un inminente invierno y sobre las temibles criaturas del norte. La tercera relata los esfuerzos por reclamar el trono de los últimos miembros exiliados de una dinastía destronada. A pesar de sus personajes moralmente ambiguos, la serie profundiza en los problemas de la jerarquía social, religión, lealtad, corrupción, sexo, guerra civil, crimen y castigo.</p>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="web footer">
+        <nav>
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de cookies</a>
+            <a href="#" class="go top">Volver arriba</a>
+        </nav>
+    </footer>
+</body>
 
-		</footer>
-	
-	</body>
-	</html>	
+</html>
