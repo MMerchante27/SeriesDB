@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Vikings</title>
-	</head>
-	<body>
 
-		<header class="web header"> <!--Cabecera de la web donde se incluye su título, el menú de navegacion y la barra de búsqueda -->
-			<div class="brand">Series DB</div>
-			<nav>
-				<ul>
-					<li>
-						<a href="#" title="Sistema de recomendación de series y películas">Descubrir</a>
-					</li>
-					<li>
-						<a href="#" title="Catálogo de películas">Películas</a>
-					</li>
-					<li>
-						<a href="#" title="Catálogo de series">Series</a>
-					</li>
-					<li>
-						<a href="#" title="Listado de actores y actrices de series y películas">Actores y actrices</a>
-					</li>
-				</ul>
-			</nav>
-			<form class="search form">
-				<input type="search" id="search" name="q" placeholder="Buscar...">
-				<button type="search">Buscar</button>
-			</form>
-		</header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Series DB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-		<main class="web main"><!-- Contenido principal de la página donde aparecerá la información de la serie-->
-			
-			<header class="series media header"> 
-				<h1 class="series media title">Vikings</h1>
-				<img src="https://image.tmdb.org/t/p/w185/mBDlsOhNOV1MkNii81aT14EYQ4S.jpg" alt="Ragnar's eye" title="Carátula de Vikings">
-			</header>
-			<div class="meta">
-				<div class="categories">
-					<ul>
-						<li>Drama</li>
-						<li>Acción</li>
-					</ul>
-				</div>
-				<time class="release date" datatime="2013-03-12">2013</time>
-				<div class="rating">7.5</div>
-			</div>	
-			<p class="overview">La serie, ambientada en los continentes ficticios de Westeros y Essos al final de un verano de una decada de duración, entrelaza varias líneas argumentales. La primera sigue a los miembros de varias casas nobles inmersos en una guerra civil por conseguir el Trono de Hierro de los Siete Reinos. La segunda trata sobre la creciente amenaza de un inminente invierno y sobre las temibles criaturas del norte. La tercera relata los esfuerzos por reclamar el trono de los últimos miembros exiliados de una dinastía destronada. A pesar de sus personajes moralmente ambiguos, la serie profundiza en los problemas de la jerarquía social, religión, lealtad, corrupción, sexo, guerra civil, crimen y castigo.</p>
+<body>
+    <header class="web header">
+        <!--Cabecera de la web donde se incluye su título, el menú de navegacion y la barra de búsqueda -->
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="brand">Series DB</div>
+                </div>
+                <div class="col-6">
+                    <nav class="main menu">
+                        <ul>
+                            <li>
+                                <a href="#" title="Sistema de recomendación de series y películas">Descubrir</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Catálogo de películas">Películas</a>
+                            </li>
+                            <li>
+                                <a href="index.html" title="Catálogo de series">Series</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Listado de actores y actrices de series y películas">Actores y actrices</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-3">
+                    <form class="search form">
+                        <input type="search" id="search" name="q" placeholder="Buscar...">
+                        <button type="search">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="web main series media item detail">
+        <!-- Contenido principal de la página donde aparecerá la información de la serie-->
+        <div class="container">
+            <header class="series media header">
+                <h1 class="series media title">Vikings</h1>
+            </header>
+            <div class="row">
+                <div class="col-3">
+                    <div class="cover">
+                        <img src="https://image.tmdb.org/t/p/w185/mBDlsOhNOV1MkNii81aT14EYQ4S.jpg" alt="Ragnar's eye" title="Carátula de Vikings">
+                    </div>
+                    <div class="meta">
+                        <time class="release date" datatime="2013-03-12">2013</time>
+                        <div class="rating">7.5</div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="video-wrapper">
+                        <video class="video trailer" controls autoplay>
+                            <source src="http://movietrailers.apple.com/movies/wb/batmanvsuperman/batmanvssuperman-us-tlr4_i320.m4v" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="meta">
+                        <div class="categories">
+                            <ul>
+                                <li>Drama</li>
+                                <li>Acción</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="overview">Sigue las aventuras de Ragnar Lothbrok, el héroe más grande de su época. La serie narra las sagas de la banda de hermanos vikingos de Ragnar y su familia, cuando él se levanta para convertirse en el rey de las tribus vikingas. Además de ser un guerrero valiente, Ragnar encarna las tradiciones nórdicas de la devoción a los dioses, la leyenda dice que él era un descendiente directo de Odín, el dios de la guerra y los guerreros</p>
+        </div>
+    </main>
+    <footer class="web footer">
+        <nav>
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de cookies</a>
+            <a href="#" class="go top">Volver arriba</a>
+        </nav>
+    </footer>
+</body>
 
-			<video class="video trailer" controls autoplay>
-				<source src="http://movietrailers.apple.com/movies/wb/batmanvsuperman/batmanvssuperman-us-tlr4_i320.m4v" type="video/mp4">
-			</video>
-						
-		</main>
-
-		<footer class="web footer">
-			<nav>
-				<a href="#">Aviso legal</a>
-				<a href="#">Política de cookies</a>
-				<a href="#" class="go top">Volver arriba</a>
-			</nav>
-
-		</footer>
-	
-	</body>
-	</html>	
+</html>

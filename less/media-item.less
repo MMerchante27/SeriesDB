@@ -1,15 +1,13 @@
 .media.item {
-
-	height: 316px;
+	.cover{overflow: hidden;}
 	margin-bottom: 25px;
-	overflow: hidden;
-	.cover{overflow: hidden}
+	margin: 20px;
+	padding: 25px;
+	border: 1px solid #ddd;
+	border-radius:20px;
+	box-shadow: 0 0 10px 0 #ccc;
+	
 
-	&:hover {
-		img{
-			transform:scale(1.2);
-		}
-	}
 	.link{
 		color: @main-text-color;
 	}
@@ -21,6 +19,7 @@
 
 	.wrapper {
 		margin: 0 20px 20px 20px;
+		
 	}
 	.title {
 		font-size: 18px;
@@ -41,4 +40,17 @@
 .rating {
 	display: inline;
 	margin-left: 20px;
+}
+
+.video-wrapper{
+	perspective:2200px;
+}
+
+.video{
+	animation: bounceInDown 2s;
+	width: 100%;
+	height: 451px;
+	background: black;
+	perspective:500px;
+	transform: rotateY(-50deg);
 }
