@@ -8,6 +8,7 @@
 
 <body>
     <div id="demo">Hello world</div>
+    <button id="saveButton">Save</button>
     <button id="updateDateButton">Update date</button>
     <button id="addListenerButton">Add listener</button>
     <button id="removeListenerButton">Remove listener</button>
@@ -27,6 +28,12 @@
     document.getElementById('removeListenerButton').addEventListener('click', function() {
         console.log("removeListenerButton", arguments)
         document.getElementById('updateDateButton').removeEventListener('click', updateDate);
+    });
+
+    document.getElementById('demo').contentEditable = true; //permite al usuario escribir
+
+    document.getElementById('saveButton').addEventListener('click', function(evt){
+    	console.log("Contenido", document.getElementById('demo').innerHTML);
     });
     </script>
 
