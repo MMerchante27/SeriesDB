@@ -7,31 +7,35 @@
 </head>
 
 <body>
-    <!--Emmet:div#container>div#content{This is the content} -->
-    <div id="container" style="background: gold; padding:20px;">
-        <div id="content" style="background:coral; padding:20px;">This is the content</div>
-    </div>
-	
-	<a href="http://www.google.com/" target="_blank">Ir a Google</a>
+    <button id="changeBackgroundColor">Cambiar color de fondo</button>
 
     <script>
-    document.getElementById('container').addEventListener('click', function(event) {
-        console.log("CONTAINER CLICKED");
-    });
 
-    document.getElementById('content').addEventListener('click', function(event) {
-        console.log("content clicked");
-    });
+    document.body.style.transition = 'background-color, 250ms'
 
-    document.body.addEventListener('click', function(event) {
-        console.log("body clicked");
-    });
+    var timeoutID = null;
 
-    document.getElementsByTagName("a")[0].addEventListener('click', function(event){
-    	console.log("Google link");
-    	event.preventDefault();
+    document.getElementById('changeBackgroundColor').addEventListener('click', function(event) {
+        console.log("Hago click en el botón");
+
+        if (timeoutID != null) {
+            clearTimeout(timeoutID); // cancela el timeout anterior
+        }
+
+        timeoutID = setTimeout(function() {
+            console.log("Ha terminado el timeout y cambio color");
+            var currentColor = document.body.style.backgroundColor;
+            if (currentColor == 'coral') {
+                document.body.style.backgroundColor = 'white';
+            } else {
+                document.body.style.backgroundColor = 'coral';
+            }
+            timeoutID=null;
+        }, 2000);
+
     });
 
     </script>
+</body>
 
 </html>
