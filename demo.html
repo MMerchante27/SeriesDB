@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-
 <body>
-    <button id="changeBackgroundColor">Cambiar color de fondo</button>
+    <div id="counter">0</div>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <button id="resetButton">Reset</button>
 
     <script>
-
-    document.body.style.transition = 'background-color, 250ms'
-
-    var timeoutID = null;
-
-    document.getElementById('changeBackgroundColor').addEventListener('click', function(event) {
-        console.log("Hago click en el botón");
-
-        if (timeoutID != null) {
-            clearTimeout(timeoutID); // cancela el timeout anterior
-        }
-
-        timeoutID = setTimeout(function() {
-            console.log("Ha terminado el timeout y cambio color");
-            var currentColor = document.body.style.backgroundColor;
-            if (currentColor == 'coral') {
-                document.body.style.backgroundColor = 'white';
-            } else {
-                document.body.style.backgroundColor = 'coral';
+        var intervalID=null;
+        // Pone el valor del contador a 0
+        document.getElementById('resetButton').addEventListener('click', function(){
+            document.getElementById('counter').innerHTML=0;
+        });
+        // Cancela el interval
+        document.getElementById('stopButton').addEventListener('click', function(){
+            if(intervalID!=null){
+                clearInterval(intervalID);
+                intervalID=null;
             }
-            timeoutID=null;
-        }, 2000);
-
-    });
-
-    </script>
+        });
+        // Arranca el contador
+        document.getElementById('startButton').addEventListener('click', function(){
+            if(intervalID != null){
+                return;
+            }
+            intervalID=setInterval(function(){
+                var counterValue=document.getElementById('counter').innerHTML;
+                if(isNaN(counterValue)){
+                    counterValue=0;
+                }
+                counterValue= parseInt(counterValue);
+                counterValue++;
+                document.getElementById('counter').innerHTML=counterValue;
+            }, 50);
+        });
+</script>
 </body>
-
 </html>
