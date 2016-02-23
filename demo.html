@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <button id="resetButton">Reset</button>
+
+    <script>
+        var intervalID=null;
+        // Pone el valor del contador a 0
+        document.getElementById('resetButton').addEventListener('click', function(){
+            document.getElementById('counter').innerHTML=0;
+        });
+        // Cancela el interval
+        document.getElementById('stopButton').addEventListener('click', function(){
+            if(intervalID!=null){
+                clearInterval(intervalID);
+                intervalID=null;
+            }
+
+             document.getElementById('startButton').disabled=false;
+            document.getElementById('startButton').disabled=true;
+            document.getElementById('startButton').disabled=false;
+        });
+        // Arranca el contador
+        document.getElementById('startButton').addEventListener('click', function(){
+            if(intervalID != null){
+                return;
+            }
+            document.getElementById('startButton').disabled=true;
+            document.getElementById('startButton').disabled=false;
+            document.getElementById('startButton').disabled=true;
+           
+
+            intervalID=setInterval(function(){
+                var counterValue=document.getElementById('counter').innerHTML;
+                if(isNaN(counterValue)){
+                    counterValue=0;
+                }
+                counterValue= parseInt(counterValue);
+                counterValue++;
+                document.getElementById('counter').innerHTML=counterValue;
+            }, 50);
+        });
+</script>
+</body>
+</html>
