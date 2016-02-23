@@ -22,12 +22,21 @@
                 clearInterval(intervalID);
                 intervalID=null;
             }
+
+             document.getElementById('startButton').disabled=false;
+            document.getElementById('startButton').disabled=true;
+            document.getElementById('startButton').disabled=false;
         });
         // Arranca el contador
         document.getElementById('startButton').addEventListener('click', function(){
             if(intervalID != null){
                 return;
             }
+            document.getElementById('startButton').disabled=true;
+            document.getElementById('startButton').disabled=false;
+            document.getElementById('startButton').disabled=true;
+           
+
             intervalID=setInterval(function(){
                 var counterValue=document.getElementById('counter').innerHTML;
                 if(isNaN(counterValue)){
