@@ -10,7 +10,7 @@
 	<h1>Nueva serie</h1>
 	<form novalidate>
 		<div>
-			<input type="text" id="title" name="title" placeholder="Título de la serie" required>
+			<input type="text" id="title" name="title" placeholder="Título de la serie" required class="auto-focus">
 		</div>
 
 		<div>
@@ -61,7 +61,7 @@
 			<ul>
 				<li>
 					<label>
-						<input type="radio" name="age_cal" value="all" required>Todos los públicos
+						<input type="radio" name="age_cal" value="all" required checked>Todos los públicos
 					</label>
 				</li>
 				<li>
@@ -93,6 +93,7 @@
 		</div>
 	</form>
 
-
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/src/app.js"></script>
 </body>
 </html>

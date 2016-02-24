@@ -6,3 +6,6 @@ node_modules/
 
 # CSS 
 style.css
+
+# Bower modules
+bower_components
