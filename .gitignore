@@ -6,3 +6,12 @@ node_modules/
 
 # CSS 
 style.css
+
+# Bower modules
+bower_components
+
+# Python
+*.py*
+
+# DB
+db/
