@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drag & Drop</title>
+    <style>
+	    .drag {
+	        width: 100px;
+	        height: 100px;
+	        background: gold;
+	        margin-right: 10px;
+	        float: left;
+	    }
+	    
+	    #drop {
+	        width: 100%;
+	        height: 200px;
+	        background: black;
+	        position: fixed;
+	        bottom: 0px;
+ 			color:gold;
+	        font-weight: bold;	
+	        font-size: 180%;      
+	        transition: background 250ms;
+	        
+
+	    }
+	    
+	    #drop.ok {
+	        background: lightgreen;
+
+	       
+	    }
+	    
+	    #drop.error {
+	        background: tomato;
+	    }
+    </style>
+</head>
+
+<body>
+    <div class="drag" draggable="true" data-serie-id="A">A</div>
+    <div class="drag" draggable="true" data-serie-id="B">B</div>
+    <div class="drag" draggable="true" data-serie-id="C">C</div>
+    <div class="drag" draggable="true" data-serie-id="D">D</div>
+
+    
+
+    <div id="drop"></div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+    	var draggedSerieId = null;
+
+	    $(".drag").on("dragstart", function(evt) {
+
+	        console.log("DRAG START", evt);
+	        // ponemos el id de la serie seleccionada
+	        var serieId = $(this).data("serieId");
+	        draggedSerieId = serieId;
+	        evt.originalEvent.dataTransfer.setData("serieId", serieId);
+
+	    }).on("dragend", function(evt) {
+
+	        console.log("DRAG END", evt);
+	        draggedSerieId = null;
+
+	    });
+
+	    $("#drop").on("dragover", function(evt) {  //Al entrar en la zona de Drop
+	        event.preventDefault();
+			console.log("DRAG OVER", evt, draggedSerieId);	
+			if (draggedSerieId != "B"){
+				$(this).addClass("ok");
+			} else {
+				$(this).addClass("error");
+			}
+
+	    }).on("dragleave", function(evt) { //Al abandonar la zona del drop
+	        event.preventDefault();
+	        console.log("DRAG LEAVE", evt);
+	        $(this).removeClass("ok error");
+
+	    }).on("drop", function(evt){ // Al soltar lo que hemos arrastrado
+	    	event.preventDefault();
+	    	console.log("DROPPED", evt);
+	   		var movieId = evt.originalEvent.dataTransfer.getData("serieId");
+	   		if(movieId != "B"){
+	   			var text = $(this).text();
+	   			text += movieId;
+	   			$(this).text(text);
+	   		}
+	   		$(this).removeClass("ok error");
+	    });
+    </script>
+</body>
+
+</html>

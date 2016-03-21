@@ -1,0 +1,71 @@
+html{
+  background-color: #ffffff;
+}
+
+
+form{
+  text-align: center;	
+  padding: 40px;
+  max-width: 50%;
+   margin:40px auto;
+  border-radius: 8px/7px; 
+  box-shadow:0 4px 10px 4px rgba(19, 35, 47,.1); 
+    
+}
+
+input[type=text],input[type=password],input[type=url]{
+  width: 180px; 
+  height: 34px;
+  color:@main;
+  font-weight: bold;
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border:2px solid @gray-light;
+  margin-top: 20px; 
+  padding-left: 10px;
+  background: none;
+  transition:border-color .25s ease, box-shadow .25s ease;
+  &:focus {
+		outline:0;
+		border-color:@main;
+  }
+}
+
+i{
+	&:hover{
+		cursor:pointer;
+	}
+}
+
+
+button {
+  border:0;
+  outline:none;
+  border-radius:0;
+  font-weight: bold;
+  margin: 15px 0 15px 0;
+  padding: 15px 5px 15px 5px;
+  background:@main;
+  color:@white;
+  transition:all.5s ease;
+  &:hover, &:focus {
+    background:@main-dark;
+  }
+}
+
+.webmain{
+  text-align:center;
+}
+ 
+
+body {
+	background-color: @body-color;
+  margin: 0;
+} 
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+
+
