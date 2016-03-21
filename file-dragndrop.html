@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>File Drag & Drop</title>
+    <style>
+    #drop {
+        width: 100%;
+        height: 50%;
+        background: black;
+        position: fixed;
+        bottom: 0px;
+        color: gold;
+        transition: background 250ms;
+    }
+    
+    #drop.ok {
+        background: lightgreen;
+    }
+    
+    #drop.error {
+        background: tomato;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="drop">Suelta aquí los archivos</div>
+    <div id="content"></div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+	    $("#drop").on("drop", function(evt) {
+
+	        evt.preventDefault();
+	        var originalEv= evt.originalEvent;
+	        console.log("DROPPED", originalEv.dataTransfer.files);
+
+	    }).on("dragover", function(evt) {
+	        evt.preventDefault();
+	    });
+
+	    //evitamos que el navegador cargue el archivop que soltamos dentro
+	    $(window).on("drop dragover ", function(evt) {
+
+	        evt.preventDefault();
+	        evt.stopPropagation();
+	        console.log("DRAG OVER", evt);
+
+	    });
+    </script>
+</body>
+
+</html>
